@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ExternalSite.master.cs" Inherits="BookItems.Site.ExternalSite" %>
+<%@ Import Namespace="BookItems.Site" %>
+<%@ Import Namespace="BookItems.Core" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>Shoreham Sussex Flying Group</title>
+
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/jquery-ui-1.8.custom.css" rel="stylesheet" type="text/css"/>
+
+    <script src="Scripts/jquery-1.4.2.min.js" language="javascript" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui-1.8.custom.min.js" language="javascript" type="text/javascript"></script>
+    <script src="Scripts/bookableitems.js" language="javascript" type="text/javascript"></script>
+    
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+        <div class="page">
+            <div class="header">
+                <div class="title">
+                    <h1>Shoreham Sussex Flying Group</h1>
+                </div>
+            </div>
+            <div class="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+

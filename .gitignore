@@ -1,10 +1,14 @@
 
 BookItems.5.1.ReSharper.user
 
-BookItems.Automailer/ActiveRecordConfig.xml
+ActiveRecordConfig.xml
 
 *.exe
 
 *.mdb
 
 *.pdb
+
+bin
+
+obj

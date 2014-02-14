@@ -1,4 +1,0 @@
-bookitems
-=========
-
-Booking website

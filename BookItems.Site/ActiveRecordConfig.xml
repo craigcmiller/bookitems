@@ -12,6 +12,6 @@
     
     <add key="dialect" value="NHibernate.Dialect.MsSql2005Dialect" />
     
-
+    <add key="connection.connection_string" value="Data Source=91.186.0.11,1433;Network Library=DBMSSOCN;Initial Catalog=BookItems;User ID=BookItems;Password=gerung;" />
   </config>
 </activerecord>

@@ -42,28 +42,40 @@
     </div>
     
     <div id="choosePilotDialog" title="Choose Pilot">
-    	<p>Choose the pilot:
+    	<%="<p>"%>
+    	Choose the pilot:
             <select id="userChoice">
                 <% foreach (User user in SessionManager.Shared.BookableItem.Users)
                    {
-                       %><option <%=(SessionManager.Shared.User!=null&&user.Id==SessionManager.Shared.User.Id?" selected=\"selected\"":"") %> value="<%=user.Username %>"><%=user.Username %></option><%
+                   		Response.Write("<option " + (SessionManager.Shared.User !=null && user.Id==SessionManager.Shared.User.Id ? " selected=\"selected\"":""));
+                   		
+                       %> value="<%=user.Username %>"><%=user.Username %><%
+
+                       Response.Write("</option>");
                    } %>
             </select>
-        </p>
+        
+       	<%="</p>"%>
+
         <button id="choosePilotDilogButtonOK" onclick="confirmOK()">OK</button>
         <button id="choosePilotDilogButtonCancel" onclick="confirmCancel()">Cancel</button>
     </div>
 
     <div id="deleteBookingDialog" title="Delete Booking">
-        <p>Delete the booking for this day for the following pilot: 
+    	<%="<p>"%>
+
+        Delete the booking for this day for the following pilot:
             <select id="deleteBookingUserChoice">
                 <% foreach (User user in SessionManager.Shared.BookableItem.Users)
                    {
-                       %><option <%=(SessionManager.Shared.User!=null&&user.Id==SessionManager.Shared.User.Id?" selected=\"selected\"":"") %> value="<%=user.Username %>"><%=user.Username %></option><%
+                   		Response.Write("<option " + (SessionManager.Shared.User!=null&&user.Id==SessionManager.Shared.User.Id?" selected=\"selected\"":""));
+                       %> value="<%=user.Username %>"><%=user.Username %><%
+                       Response.Write("</option>");
                    } %>
             </select>
             <button id="deleteBookingDialogDeleteAllForUser" onclick="deleteBookingForUser(document.getElementById('deleteBookingUserChoice').value)">Delete</button>
-        </p>
+        
+		<%="</p>"%>
 
         <hr />
         

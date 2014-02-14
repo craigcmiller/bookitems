@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BookItems.Site.SiteMaster" %>
+<%@ Import Namespace="BookItems.Site" %>
+<%@ Import Namespace="BookItems.Core" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Shoreham Sussex Flying Group</title>
+
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/jquery-ui-1.8.custom.css" rel="stylesheet" type="text/css"/>
+
+    <script src="Scripts/jquery-1.4.2.min.js" language="javascript" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui-1.8.custom.min.js" language="javascript" type="text/javascript"></script>
+    <script src="Scripts/bookableitems.js" language="javascript" type="text/javascript"></script>
+
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            setup();
+        });
+
+        jQuery(document).ready(function () {
+            jQuery("#choosePilotDialog").dialog({
+                bgiframe: true, autoOpen: false, height: 120, modal: true
+            });
+
+            jQuery("#deleteBookingDialog").dialog({
+                bgiframe: true, autoOpen: false, height: 150, width: 360, modal: true
+            });
+
+            $('#datepicker').datepicker({
+                onSelect: function (dateText, inst) {
+                    selectBookingPeriod(dateText, inst);
+                }
+            });
+        });
+    </script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>Shoreham Sussex Flying Group</h1>
+            </div>
+            
+            
+            <div class="menu">
+                <a href="Default.aspx">Bookings</a>
+                <%
+                try {
+                if (SessionManager.Shared.BookableItem.HasUser(SessionManager.Shared.User))
+                   {
+					   %>
+					   <a href="NewsPost.aspx">News</a>
+					   <a href="AccountSettings.aspx">Account Settings</a>
+					   <a href="UserList.aspx">Group Members</a>
+                   <%
+                   	Response.Write(GetUserPages());
+                   	
+                   }
+                   } catch (Exception ex) {
+                   		Response.Write(ex.Message + ex.StackTrace);
+                   }
+                   %>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    </form>
+</body>
+</html>
+

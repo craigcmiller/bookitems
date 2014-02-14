@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="9BEA9F8C-6A87-4F5C-B030-B6691E7DED37" ModuleId="BookItems.Site" />
+  <Module PersistentId="8CCF90AB-DA3F-4DA6-9137-7BB8902326DD" ModuleId="BookItems.Core" />
+  <Module PersistentId="065BCB2F-EAFE-40B8-B6E4-E9796BBD6E2D" ModuleId="BookItems.Automailer" />
+</Modules>

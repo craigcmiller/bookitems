@@ -1,0 +1,16 @@
+/Users/craig/Projects/BookItems/BookItems.Automailer/obj/Debug/BookItems.Automailer.ActiveRecordConfig.xml
+/Users/craig/Projects/BookItems/BookItems.Automailer/bin/Debug/ActiveRecordConfig.xml
+/Users/craig/Projects/BookItems/BookItems.Automailer/bin/Debug/BookItems.Automailer.exe.config
+/Users/craig/Projects/BookItems/BookItems.Automailer/bin/Debug/BookItems.Automailer.exe.mdb
+/Users/craig/Projects/BookItems/BookItems.Automailer/bin/Debug/BookItems.Automailer.exe
+/Users/craig/Projects/BookItems/BookItems.Automailer/obj/Debug/BookItems.Automailer.exe
+/Users/craig/Projects/BookItems/BookItems.Automailer/obj/Debug/BookItems.Automailer.exe.mdb
+/Users/craig/Projects/BookItems/BookItems.Automailer/bin/Debug/Castle.ActiveRecord.dll
+/Users/craig/Projects/BookItems/BookItems.Automailer/bin/Debug/Iesi.Collections.dll
+/Users/craig/Projects/BookItems/BookItems.Automailer/bin/Debug/NHibernate.dll
+/Users/craig/Projects/BookItems/BookItems.Automailer/bin/Debug/BookItems.Core.dll
+/Users/craig/Projects/BookItems/BookItems.Automailer/bin/Debug/BookItems.Core.dll.mdb
+/Users/craig/Projects/BookItems/BookItems.Automailer/bin/Debug/NHibernate.ByteCode.Castle.dll
+/Users/craig/Projects/BookItems/BookItems.Automailer/bin/Debug/Castle.Components.Validator.dll
+/Users/craig/Projects/BookItems/BookItems.Automailer/bin/Debug/Castle.Core.dll
+/Users/craig/Projects/BookItems/BookItems.Automailer/bin/Debug/NHibernate.Search.dll

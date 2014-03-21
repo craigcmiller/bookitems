@@ -42,6 +42,12 @@
 			        <asp:CheckBox runat="server" ID="emailDayBeforeBookingReminder" />
 			    </td>
 			</tr>
+			<tr>
+			    <td>Email News Posts:</td>
+			    <td>
+			        <asp:CheckBox runat="server" ID="emailNewsPostsCheckBox" />
+			    </td>
+			</tr>
 			
 			<tr>
 				<td></td>

@@ -27,6 +27,7 @@ namespace BookItems.Site
 			phoneNumberTextBox.Text = user.PhoneNumber;
 			mobileNumberTextBox.Text = user.MobileNumber;
 			emailDayBeforeBookingReminder.Checked = user.Email24HoursBeforeBooking;
+			emailNewsPostsCheckBox.Checked = user.EmailNewsPosts;
 		}
 
 		protected void Page_Load(object sender, EventArgs e)
@@ -43,6 +44,7 @@ namespace BookItems.Site
 			user.PhoneNumber = phoneNumberTextBox.Text;
 			user.MobileNumber = mobileNumberTextBox.Text;
             user.Email24HoursBeforeBooking = emailDayBeforeBookingReminder.Checked;
+			user.EmailNewsPosts = emailNewsPostsCheckBox.Checked;
 
 			user.SaveAndFlush();
 		}

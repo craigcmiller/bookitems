@@ -1,12 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="BookItems.Automailer/Program.cs">
+    <Files>
+      <File FileName="BookItems.Site/Default.aspx" Line="22" Column="23" />
+      <File FileName="BookItems.Site/UserControlHelper.cs" Line="31" Column="2" />
+      <File FileName="BookItems.Automailer/Program.cs" Line="25" Column="91" />
+      <File FileName="../Airbox/AirboxiOS/Airbox.iOS.Common/InternetConnectionStatus.cs" Line="6" Column="45" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="BookItems.Automailer" expanded="True" />
+          <Node name="BookItems.Automailer" expanded="True">
+            <Node name="Program.cs" selected="True" />
+          </Node>
           <Node name="BookItems.Site" expanded="True">
-            <Node name="Default.aspx" expanded="True" selected="True" />
+            <Node name="Default.aspx" expanded="True" />
           </Node>
           <Node name="CreateSchema" expanded="True" />
         </State>

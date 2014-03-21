@@ -22,5 +22,10 @@ namespace BookItems.Site
 			System.Web.HttpContext.Current.Server.Execute(pageHolder, result, false);
 			return result.ToString();
 		}
+
+		public static string GetJavascriptDateConstructor(DateTime dt)
+		{
+			return string.Format ("new Date({0}, {1}, {2}, {3}, {4}, {5}, {6});", dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, 0);
+		}
 	}
 }

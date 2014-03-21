@@ -33,6 +33,14 @@ namespace BookItems.Site
 			SessionManager.Shared.BookableItem.CreateNewsItem(
 				titleTextBox.Text, messageBodyTextBox.Text, SessionManager.Shared.User);
 
+			Emailer emailer = new Emailer ();
+
+			// Email any users with that flag set
+			foreach (User user in SessionManager.Shared.BookableItem.Users) {
+				if (user.EmailNewsPosts)
+					emailer.SendEmail (user.EmailAddress, titleTextBox.Text, messageBodyTextBox.Text);
+			}
+
 			Response.Redirect("~/Default.aspx");
 		}
 	}

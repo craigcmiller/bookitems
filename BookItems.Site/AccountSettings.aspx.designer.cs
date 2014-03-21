@@ -29,6 +29,8 @@ namespace BookItems.Site {
 		
 		protected System.Web.UI.WebControls.CheckBox emailDayBeforeBookingReminder;
 		
+		protected System.Web.UI.WebControls.CheckBox emailNewsPostsCheckBox;
+		
 		protected System.Web.UI.WebControls.Button saveButton;
 	}
 }

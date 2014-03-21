@@ -29,12 +29,27 @@
     </table>
     -->
 
-    <div id="currenttime">
-    	Current Time: <%=DateTime.Now.ToString("HH:mm:ss")%>
-    </div>
-
     <div id="bookingarea">
         <%=UserControlHelper.RenderUserControlToString<BookingPeriodControl>("~/BookingPeriodControl.ascx", null)%>
+    </div>
+
+    <div id="currenttime">
+    	Current Time: <span id="time"><%=DateTime.Now.ToString("HH:mm:ss")%></span>
+
+    	<script type="text/javascript">
+    		var _currentDate=<%=UserControlHelper.GetJavascriptDateConstructor(DateTime.Now.AddSeconds(+2))%>
+
+    		function updateTime()
+			{
+				var t = _currentDate.toLocaleTimeString();
+				t = t.replace(" BST", "");
+				document.getElementById("time").innerHTML = t;
+
+				_currentDate.setSeconds(_currentDate.getSeconds() + 1);
+			}
+			
+    		setInterval(function(){updateTime()}, 1000);
+		</script>
     </div>
     
     <div id="contactinfo">
